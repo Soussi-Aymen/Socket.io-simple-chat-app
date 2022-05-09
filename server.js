@@ -8,7 +8,7 @@ server.listen(process.env.PORT||3000);
 console.log('server runing');
 
 app.get('/',function(request,response){
-res.sendFile(__dirname+'/index.html');
+    response.sendFile(__dirname+'/index.html');
 });
 
 io.sockets.on('connection',function(socket){
